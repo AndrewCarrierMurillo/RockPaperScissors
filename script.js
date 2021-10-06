@@ -15,35 +15,33 @@ function computerPlay() {
 
 function game() {
     function round(computerSelection, playerSelection) {
-        let player = playerSelection.toLowerCase();
+        let player = playerSelection;
         let computer = computerSelection;
     
         if (player === "rock" && computer === "rock") {
-            return "Tie. Rock and Rock.";
+            console.log("Tie. Rock and Rock.");
         } else if (player === "rock" && computer === "paper") {
             computerScore++;
-            return "You lose. Paper beats Rock.";
+            console.log("You lose. Paper beats Rock.");
         } else if (player === "rock" && computer === "scissors") {
             playerScore++;
-            return "You win. Rock beats Scissors.";
+            console.log("You win. Rock beats Scissors.");
         } else if (player === "paper" && computer === "paper") {
-            return "Tie. Paper and Paper.";
+            console.log("Tie. Paper and Paper.");
         } else if (player === "paper" && computer === "rock") {
             playerScore++;
-            return "You win. Paper beats Rock.";
+            console.log("You win. Paper beats Rock.");
         } else if (player === "paper" && computer === "scissors") {
             computerScore++;
-            return "You lose. Scissors beats Paper.";
+            console.log("You lose. Scissors beats Paper.");
         } else if (player === "scissors" && computer === "scissors") {
-            return "Tie. Scissors and Scissors.";
+            console.log("Tie. Scissors and Scissors.");
         } else if (player === "scissors" && computer === "rock") {
             computerScore++;
-            return "You lose. Rock beats Scissors.";
-        } else if (player === "scissors" && computer === "paper") {
-            playerScore++;
-            return "You win. Scissors beats Paper.";
+            console.log("You lose. Rock beats Scissors.");
         } else {
-            return "Please choose either rock, paper, or scissors.";
+            playerScore++;
+            console.log("You win. Scissors beats Paper.");
         }
     }
 }
@@ -56,6 +54,8 @@ for(let i = 0; i < 5; i++) {
         userInput = prompt("Invalid selection. Input rock, paper, or scissors.");
         playerSelection = userInput.toLowerCase();
     }
+
+
 }
 
 
