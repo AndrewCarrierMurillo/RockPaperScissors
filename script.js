@@ -1,21 +1,19 @@
-// function that plays 5 rounds of game and reports winner / loser at end.
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
-    // function returns computers turn based on if variable equals 0, 1, or 2.
-    function computerPlay() {
-        let move = Math.floor(Math.random() * 3);
+function computerPlay() {
+    let move = Math.floor(Math.random() * 3);
 
-        if (move === 0) {
-            return "rock";
-        } else if (move === 1) {
-            return "paper";
-        } else {
-            return "scissors";
-        }
+    if (move === 0) {
+        return "rock";
+    } else if (move === 1) {
+        return "paper";
+    } else {
+        return "scissors";
     }
+}
 
+function game() {
     function round(computerSelection, playerSelection) {
         let player = playerSelection.toLowerCase();
         let computer = computerSelection;
@@ -47,24 +45,17 @@ function game() {
         } else {
             return "Please choose either rock, paper, or scissors.";
         }
-    
-    }
-
-    for(let i = 0; i < 5; i++) {
-        let playerInput = prompt("Enter rock, paper, or scissors: ");
-        let computerSelection = computerPlay();
-
-        round(computerSelection, playerInput);
-        if (round === "Please choose either rock, paper, or scissors.") {
-            --i;
-        }
-    }
-
-    if (playerScore === computerScore) {
-        alert("Tie.");
-    } else if (playerScore > computerScore){
-        alert("You win. Congrats!");
-    } else {
-        alert("You lost. Try again.");
     }
 }
+
+for(let i = 0; i < 5; i++) {
+    let userInput = prompt("Enter rock, paper, or scissors: ");
+    let playerSelection = userInput.toLowerCase();
+
+    while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
+        userInput = prompt("Invalid selection. Input rock, paper, or scissors.");
+        playerSelection = userInput.toLowerCase();
+    }
+}
+
+
