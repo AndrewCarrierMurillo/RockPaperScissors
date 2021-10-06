@@ -46,7 +46,7 @@ function game() {
     }
 }
 
-for(let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
     let userInput = prompt("Enter rock, paper, or scissors: ");
     let playerSelection = userInput.toLowerCase();
 
@@ -54,8 +54,15 @@ for(let i = 0; i < 5; i++) {
         userInput = prompt("Invalid selection. Input rock, paper, or scissors.");
         playerSelection = userInput.toLowerCase();
     }
-
-
 }
+
+if (playerScore > computerScore) {
+    console.log("You won! Congrats.");
+} else if (playerScore < computerScore) {
+    console.log("You lost. Try again.");
+} else {
+    console.log("Tied! Play again.")
+}
+
 
 
