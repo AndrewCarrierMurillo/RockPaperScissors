@@ -1,6 +1,3 @@
-let playerScore = 0;
-let computerScore = 0;
-
 function computerPlay() {
     let move = Math.floor(Math.random() * 3);
 
@@ -14,6 +11,10 @@ function computerPlay() {
 }
 
 function game() {
+
+    let playerScore = 0;
+    let computerScore = 0;
+
     function round(computerSelection, playerSelection) {
         let player = playerSelection;
         let computer = computerSelection;
@@ -44,25 +45,29 @@ function game() {
             console.log("You win. Scissors beats Paper.");
         }
     }
-}
 
-for (let i = 0; i < 5; i++) {
-    let userInput = prompt("Enter rock, paper, or scissors: ");
-    let playerSelection = userInput.toLowerCase();
+    for (let i = 0; i < 5; i++) {
+        let userInput = prompt("Enter rock, paper, or scissors: ");
+        let playerSelection = userInput.toLowerCase();
+        let computerSelection = computerPlay();
+    
+        while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
+            userInput = prompt("Invalid selection. Input rock, paper, or scissors.");
+            playerSelection = userInput.toLowerCase();
+        }
 
-    while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
-        userInput = prompt("Invalid selection. Input rock, paper, or scissors.");
-        playerSelection = userInput.toLowerCase();
+        round(computerSelection, playerSelection);
+    }
+
+    if (playerScore > computerScore) {
+        console.log("You won! Congrats.");
+    } else if (playerScore < computerScore) {
+        console.log("You lost. Try again.");
+    } else {
+        console.log("Tied! Play again.")
     }
 }
 
-if (playerScore > computerScore) {
-    console.log("You won! Congrats.");
-} else if (playerScore < computerScore) {
-    console.log("You lost. Try again.");
-} else {
-    console.log("Tied! Play again.")
-}
 
 
 
