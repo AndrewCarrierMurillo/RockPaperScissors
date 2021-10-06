@@ -42,5 +42,17 @@ function round(computerSelection, playerSelection) {
 
 }
 
-playerSelection = "rock";
+playerSelection = "safsddsf";
 computerSelection = computerPlay();
+
+console.log(round(computerSelection, playerSelection));
+
+// function that plays 5 rounds of game and reports winner / loser at end.
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for(let i = 0; i < 5; i++) {
+        
+    }
+}
