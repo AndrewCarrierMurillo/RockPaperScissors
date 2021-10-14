@@ -1,3 +1,24 @@
+
+
+// Creating variable for 'content' div in body.
+const content = document.getElementById('content');
+
+// Creating buttons for rock, paper, or scissors. 
+const rockButton = document.createElement('button');
+rockButton.textContent = "rock";
+
+const paperButton = document.createElement('button');
+paperButton.textContent = "paper";
+
+const scissorsButton = document.createElement('button');
+scissorsButton.textContent = "scissors";
+
+// Appending buttons to 'content' div in body.
+content.appendChild(rockButton);
+content.appendChild(paperButton);
+content.appendChild(scissorsButton);
+
+
 function computerPlay() {
     let move = Math.floor(Math.random() * 3);
 
@@ -46,6 +67,7 @@ function game() {
         }
     }
 
+    /*
     for (let i = 0; i < 5; i++) {
         let userInput = prompt("Enter rock, paper, or scissors: ");
         let playerSelection = userInput.toLowerCase();
@@ -58,6 +80,7 @@ function game() {
 
         round(computerSelection, playerSelection);
     }
+    */
 
     if (playerScore > computerScore) {
         console.log("You won! Congrats.");
