@@ -1,18 +1,85 @@
 * {
-    border: 1px solid red;
+    border: 1px solid rgb(251,251,251);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: Futura;
+    background-color: rgb(51,51,51);
+    color: rgb(251,251,251);
+    border: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 32px;
+    border: none;
+}
+
+.title {
+    font-size: 36px;
+    align-self: center;
+    padding: 32px;
 }
 
 .scores-container {
     display: flex;
     justify-content: space-around;
+    gap: 36px;
+    border: none;
 }
 
 .player-info,
 .computer-info {
     display: flex;
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
+    width: 400px;
 }
 
 .scores-header {
-    font-size: 36px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.player-score,
+.computer-score {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.round-game-outcome {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 32px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 32px;
+}
+
+button {
+    text-decoration: none;
+    background-color: rgb(251,251,251);
+    color: rgb(51,51,51);
+    font-size: 32px;
+}
+
+button:hover {
+    border: 1px solid rgb(251,251,251);
+    background-color: rgb(51,51,51);
+    color: rgb(251,251,251);
 }
