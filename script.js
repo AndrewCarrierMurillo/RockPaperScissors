@@ -46,33 +46,21 @@ function round(event) {
     }
 }
 
-// Creating variable for 'content' div in body.
-const content = document.getElementById('content');
+function helloWorld(event) {
+    alert("Hello World!");
+};
 
-// Creating buttons for rock, paper, or scissors. 
-const rockButton = document.createElement('button');
-rockButton.textContent = "rock";
-rockButton.addEventListener('click', () => {
-    round('rock');
-});
+const rockButton = document.getElementById('rock-button');
+rockButton.addEventListener('click', helloWorld);
 
-const paperButton = document.createElement('button');
-paperButton.textContent = "paper";
-paperButton.addEventListener('click', () => {
-    round('paper');
-});
+const paperButton = document.getElementById('paper-button');
+paperButton.addEventListener('click', helloWorld);
 
-const scissorsButton = document.createElement('button');
-scissorsButton.textContent = "scissors";
-scissorsButton.addEventListener('click', () => {
-    round('scissors');
-});
+const scissorsButton = document.getElementById('scissors-button');
+scissorsButton.addEventListener('click', helloWorld);
 
 
-// Appending buttons to 'content' div in body.
-content.appendChild(rockButton);
-content.appendChild(paperButton);
-content.appendChild(scissorsButton);
+
 
 
 
